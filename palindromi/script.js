@@ -10,7 +10,10 @@ function isPalindrome(word) {
     if (word[i] === word[j]) {
       result = true;
     }
-    console.log(word[i], word[j], result);
+    else {
+      result = false;
+      break
+    }
     j = j - 1;
   }
   return result
