@@ -32,17 +32,26 @@ function isOddOrEven(n) {
 
 const oddOrEven = prompt("scegli pari o dispari");
 const userNumber = prompt("scegli un numero tra 1 e 5");
-// poi aggiungere conrtrolli
-const comuputerNumber = genRandom(5);
-const sum = parseInt(userNumber) + comuputerNumber;
-console.log(oddOrEven, userNumber, comuputerNumber, sum);
-const result = isOddOrEven(sum);
-let winner;
-if (result === oddOrEven) {
-  winner = "user";
+if (oddOrEven === "pari" || oddOrEven === "dispari") {
+  if (userNumber > 0 && userNumber < 6) {
+    const comuputerNumber = genRandom(5);
+    const sum = parseInt(userNumber) + comuputerNumber;
+    console.log(oddOrEven, userNumber, comuputerNumber, sum);
+    const result = isOddOrEven(sum);
+    let winner;
+    if (result === oddOrEven) {
+      winner = "user";
+    }
+    else {
+      winner = "computer";
+    }
+    console.log(`il vincitore è ${winner}`);
+  }
+  else {
+    console.log("errore: inserisci un numero da 1 a 5");
+  }
 }
 else {
-  winner = "computer";
-}
-console.log(`il vincitore è ${winner}`);
+  console.log("errore: Inserisci 'pari' o 'dispari'");
 
+}
