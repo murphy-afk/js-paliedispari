@@ -21,8 +21,8 @@ function capitalizeEach(userSring) {
   }
   // console.log(capitalizedArray);
   const result = capitalizedArray.join(" ");
-  return result
+  return result;
 }
-const sentence = prompt("inserisci una frase")
-const capitalizedSentence = capitalizeEach(sentence)
+const sentence = prompt("inserisci una frase");
+const capitalizedSentence = capitalizeEach(sentence);
 console.log(capitalizedSentence);
