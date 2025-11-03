@@ -23,6 +23,6 @@ function capitalizeEach(userSring) {
   const result = capitalizedArray.join(" ");
   return result
 }
-const sentence = "pippo studia sviluppo web";
+const sentence = prompt("inserisci una frase")
 const capitalizedSentence = capitalizeEach(sentence)
 console.log(capitalizedSentence);
